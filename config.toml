@@ -1,0 +1,78 @@
+baseURL = "https://example.edu"
+languageCode = "en-us"
+title = "John Roberts"
+theme = "avicenna"
+googleAnalytics = ""
+timeout=3000
+
+[params]
+  subtitle= "Senior Data Scientist"
+  cv_name= "HadiSinaee_CV.pdf"  # TODO: update
+
+[[params.affilation]]
+  name = "Hawkfish"
+  position = "Senior Data Scientist"
+  contact = "johnayerroberts at gmail.com"
+
+[[params.social]]
+  name = "GitHub"
+  icon = "github"
+  url = "https://github.com/8ctopod"
+
+[[params.social]]
+  name = "LinkedIn"
+  icon = "linkedin"
+  url = "https://www.linkedin.com/in/john-roberts-25a4584/"
+
+
+[[params.introduction.paragraph]]
+  text="""I'm a senior data scientist at [Hawkfish](https://www.hawkfish.us/), Mike Bloomberg's [political tech
+  and data organization](https://www.wired.com/story/hawkfish-bloomberg-digital-army-fighting-for-democrats/),
+  and have spent the last year working to defeat Donald Trump and win back the senate for the Democrats.
+  """
+[[params.introduction.paragraph]]
+  text="""Prior to my career as a data scientist, I spent nine years working in venture capital building
+  seed-stage companies in the biofuels, water treatment, radioactive waste remediation, mining, and sustainable
+  packaging industries.
+  """
+[[params.introduction.paragraph]]
+  text="""I'm active in a number of organizations throughout New York City, including the [New York Road
+  Runners](https://www.nyrr.org/) where I'm a member of the executive committee of the board of directors, chair
+  of the development committee, and vice-chair of the public affairs committee, the
+  [Central Park Track Club](https://centralparktc.org/), of which I was president from 2008 to 2017 and currently serve
+  on the board, and the [Brooklyn Bridge Park Conservancy](https://www.brooklynbridgepark.org/about/about-brooklyn-bridge-park-conservancy/),
+  where I'm also a board member.
+  """
+[[params.introduction.paragraph]]
+  text="""I was a competitive runner back in the day and was the first Brooklyn resident and 46th overall finisher in the
+  2011 New York City Marathon, finishing in 2:29:46. That was a long time ago and now I get winded chasing after my kids.
+  I live with my wife and two boys in Brooklyn."""
+
+
+[[params.projects]]
+	[[params.projects.project]]
+		name = "Bayesian Hypothesis Testing API"
+		description  = """As part of the Direct Response Experiments team for the Mike Bloomberg 2020 Campaign, I built 
+		our hypothesis testing tool [using a Bayesian approach](https://arxiv.org/pdf/2003.02769.pdf). The team deployed sets
+		of ads in a Randomized Controlled Trial setting and wanted to know which ad(s) drove the highest rates of conversion
+		(of clicks, email submission, form completion, etc.). The tool modeled conversion rates using the
+		[beta distribution](https://en.wikipedia.org/wiki/Beta_distribution), enabling fast Bayesian updating, and producing
+		results that were easy to interpret by a broad audience (e.g. 'probability of being best' versus p-values). I deployed
+		the API on [kubernetes](https://kubernetes.io/) using [flask](https://flask.palletsprojects.com/en/1.1.x/quickstart/)."""
+
+ [[params.projects.project]]
+		name = "Digital Townhall Natural Language Processing Pipeline"
+		description  = "TODO: add description"
+
+ [[params.projects.project]]
+		name = "Voter Modeling - Registration, Vote By Mail, Early Vote"
+		description  = "TODO: add description"
+
+  [[params.projects.project]]
+		name = "Causal Inference of Observational Data with Bootstrapped Logistic Regression"
+		description  = "TODO: add description"
+
+  [[params.projects.project]]
+		name = "Productionization of Conditional Average Treatment Effect (CATE) Models"
+		description  = "TODO: add description"
+ 
