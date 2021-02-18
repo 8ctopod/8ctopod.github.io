@@ -7,7 +7,7 @@ timeout=3000
 
 [params]
   subtitle= "Senior Data Scientist"
-  cv_name= "HadiSinaee_CV.pdf"  # TODO: update
+  cv_name= "jar_cv.pdf"  # TODO: update
 
 [[params.affilation]]
   name = "Hawkfish"
@@ -30,12 +30,67 @@ timeout=3000
   and data organization](https://www.wired.com/story/hawkfish-bloomberg-digital-army-fighting-for-democrats/),
   and have spent the last year working to defeat Donald Trump and win back the senate for the Democrats.
   """
+
 [[params.introduction.paragraph]]
+  text="""At Hawkfish, my work has focused on voter engagement and persuasion: building voter models for use in
+  audience generation, conducting randomized controlled trials and observational studies to identify the best ad
+  content and settings, and [Conditional Average Treatment Effect (CATE) Modeling](https://arxiv.org/abs/1706.03461)
+  to identify which individuals are persuaded most strongly by particular ads.
+  """
+
+[[params.projects]]
+	[[params.projects.project]]
+		name = "Bayesian Hypothesis Testing API"
+		description  = """As part of the Experiments team for the Mike Bloomberg 2020 Campaign, I
+    built our hypothesis testing tool [using a Bayesian approach](https://arxiv.org/pdf/2003.02769.pdf). The team
+    deployed sets of ads in a Randomized Controlled Trial setting and wanted to know which ad(s) drove the highest
+    rates of conversion (clicks, email submission, form completion, etc.). The tool modeled conversion rates using
+    the [beta distribution](https://en.wikipedia.org/wiki/Beta_distribution), enabling fast Bayesian updating, and
+    producing results that were easy to interpret by a broad audience (e.g. 'probability of being best' versus p-values).
+    I deployed the API on [kubernetes](https://kubernetes.io/) using
+    [flask](https://flask.palletsprojects.com/en/1.1.x/quickstart/)."""
+
+  # [[params.projects.project]]
+  #		name = "Digital Townhall Natural Language Processing Pipeline"
+	# 	description  = "TODO: add description"
+
+ [[params.projects.project]]
+		name = "Voter Modeling to Predict Registration, Voting By Mail, and Voting Early"
+		description  = """In the early summer I built a number of voter models to predict the probability of individuals
+    (1) registering to vote in the coming months, (2) voting by mail, and (3) voting early, in order to inform audience
+    generation and ad targeting. The models used the
+    [XGBoost gradient boosted trees algorithm](https://xgboost.readthedocs.io/en/latest/) to fit over 1,000 distinct voter
+    features. I deployed the models on Hawkfish's [Kubeflow](https://www.kubeflow.org/) machine learning platform, using
+    [Katib](https://www.kubeflow.org/docs/components/katib/overview/) for parallelized hyperparameter tuning, and
+    [Argo](https://argoproj.github.io/) to score the country's 257 million eligible voters. The voter registration scores
+    were used by registration efforts that registered more voters in AZ, GA, MI, PA, and WI than were the margins of difference
+    in those states.
+    """
+
+  [[params.projects.project]]
+		name = "Causal Inference of Observational Data with Bootstrapped Logistic Regression"
+		description  = """Causal inference is best done in a
+    [randomized controlled trial (RCT) setting](https://link.springer.com/article/10.1007/s11098-009-9450-2#:~:text=Randomized%20controlled%20trials%20(RCTs)%20are,the%20outcome%E2%80%94in%20the%20experiment.),
+    but there are times when a full RCT set up isn't practical or possible. To assess ad performance as best we could outside of RCTs,
+    I built a logistic regression framework that
+    [controlled for potentially confounding variables](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4017459/) like viewer age,
+    time of day, site domain, and other factors, and isolated the effect of ad content on engagement metrics like view completion
+    and click through rates. I deployed the framework on Kubeflow which, given its ability to deploy hundreds of runs in parallel, enabled
+    [boostrap sampling to generate confidence intervals](https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/readings/MIT18_05S14_Reading24.pdf).
+    Kubeflow also enabled running many conditional settings in parallel, so we could see how ads performed across audiences as a whole and also
+    within different demographic buckets.
+    """
+
+  # [[params.projects.project]]
+	# 	name = "Productionization of Conditional Average Treatment Effect (CATE) Models"
+	# 	description  = "TODO: add description"
+
+[[params.personal.paragraph]]
   text="""Prior to my career as a data scientist, I spent nine years working in venture capital building
   seed-stage companies in the biofuels, water treatment, radioactive waste remediation, mining, and sustainable
   packaging industries.
   """
-[[params.introduction.paragraph]]
+[[params.personal.paragraph]]
   text="""I'm active in a number of organizations throughout New York City, including the [New York Road
   Runners](https://www.nyrr.org/) where I'm a member of the executive committee of the board of directors, chair
   of the development committee, and vice-chair of the public affairs committee, the
@@ -43,36 +98,7 @@ timeout=3000
   on the board, and the [Brooklyn Bridge Park Conservancy](https://www.brooklynbridgepark.org/about/about-brooklyn-bridge-park-conservancy/),
   where I'm also a board member.
   """
-[[params.introduction.paragraph]]
+[[params.personal.paragraph]]
   text="""I was a competitive runner back in the day and was the first Brooklyn resident and 46th overall finisher in the
   2011 New York City Marathon, finishing in 2:29:46. That was a long time ago and now I get winded chasing after my kids.
   I live with my wife and two boys in Brooklyn."""
-
-
-[[params.projects]]
-	[[params.projects.project]]
-		name = "Bayesian Hypothesis Testing API"
-		description  = """As part of the Direct Response Experiments team for the Mike Bloomberg 2020 Campaign, I built 
-		our hypothesis testing tool [using a Bayesian approach](https://arxiv.org/pdf/2003.02769.pdf). The team deployed sets
-		of ads in a Randomized Controlled Trial setting and wanted to know which ad(s) drove the highest rates of conversion
-		(of clicks, email submission, form completion, etc.). The tool modeled conversion rates using the
-		[beta distribution](https://en.wikipedia.org/wiki/Beta_distribution), enabling fast Bayesian updating, and producing
-		results that were easy to interpret by a broad audience (e.g. 'probability of being best' versus p-values). I deployed
-		the API on [kubernetes](https://kubernetes.io/) using [flask](https://flask.palletsprojects.com/en/1.1.x/quickstart/)."""
-
- [[params.projects.project]]
-		name = "Digital Townhall Natural Language Processing Pipeline"
-		description  = "TODO: add description"
-
- [[params.projects.project]]
-		name = "Voter Modeling - Registration, Vote By Mail, Early Vote"
-		description  = "TODO: add description"
-
-  [[params.projects.project]]
-		name = "Causal Inference of Observational Data with Bootstrapped Logistic Regression"
-		description  = "TODO: add description"
-
-  [[params.projects.project]]
-		name = "Productionization of Conditional Average Treatment Effect (CATE) Models"
-		description  = "TODO: add description"
- 
