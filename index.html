@@ -1,7 +1,37 @@
 <!doctype html><html><head><meta name=generator content="Hugo 0.80.0"><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>John Roberts- Senior Data Scientist</title><link rel=apple-touch-icon sizes=180x180 href=https://8ctopod.github.io/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://8ctopod.github.io/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://8ctopod.github.io/favicon-16x16.png><link rel=manifest href=https://8ctopod.github.io/site.webmanifest><link rel=mask-icon href=https://8ctopod.github.io/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://8ctopod.github.io/index.xml title="John Roberts"><meta property="og:title" content="John Roberts"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://8ctopod.github.io/"><meta name=twitter:card content="summary"><meta name=twitter:title content="John Roberts"><meta name=twitter:description content><link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:500,100,300" rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://8ctopod.github.io/css/normalize.css><link rel=stylesheet type=text/css media=screen href=https://8ctopod.github.io/css/main.css><script src=https://8ctopod.github.io/js/feather.min.js></script><script src=https://8ctopod.github.io/js/main.js></script></head><body><div class="container wrapper"><div class=header><img src=https://8ctopod.github.io/profile.jpg class=profile_image><h1 class=site-title>John Roberts</h1><div class=site-affilation><span class=affilation><ul class=flat><li class=position>Senior Data Scientist, Hawkfish</li><li class=email>johnayerroberts at gmail.com</li></ul></span><nav class="nav social"><ul class=flat><a href=https://github.com/8ctopod title=GitHub><i data-feather=github></i></a><a href=https://www.linkedin.com/in/john-roberts-25a4584/ title=LinkedIn><i data-feather=linkedin></i></a>|
-<a href=HadiSinaee_CV.pdf class=blog_cv>[cv]</a></ul></nav></div><nav class=nav><ul class=flat></ul></nav></div><div class=introduction><span>I&rsquo;m a senior data scientist at <a href=https://www.hawkfish.us/>Hawkfish</a>, Mike Bloomberg&rsquo;s <a href=https://www.wired.com/story/hawkfish-bloomberg-digital-army-fighting-for-democrats/>political tech
+<a href=jar_cv.pdf class=blog_cv>[cv]</a></ul></nav></div><nav class=nav><ul class=flat></ul></nav></div><div class=introduction><span>I&rsquo;m a senior data scientist at <a href=https://www.hawkfish.us/>Hawkfish</a>, Mike Bloomberg&rsquo;s <a href=https://www.wired.com/story/hawkfish-bloomberg-digital-army-fighting-for-democrats/>political tech
 and data organization</a>,
-and have spent the last year working to defeat Donald Trump and win back the senate for the Democrats.</span><br><span>Prior to my career as a data scientist, I spent nine years working in venture capital building
+and have spent the last year working to defeat Donald Trump and win back the senate for the Democrats.</span><br><span>At Hawkfish, my work has focused on voter engagement and persuasion: building voter models for use in
+audience generation, conducting randomized controlled trials and observational studies to identify the best ad
+content and settings, and <a href=https://arxiv.org/abs/1706.03461>Conditional Average Treatment Effect (CATE) Modeling</a>
+to identify which individuals are persuaded most strongly by particular ads.</span><br></div><div class=introduction><h4>Example Projects from the Past Year</h4><ul><li><a href class=project>Bayesian Hypothesis Testing API</a>
+<span class=project_description>As part of the Experiments team for the Mike Bloomberg 2020 Campaign, I
+built our hypothesis testing tool <a href=https://arxiv.org/pdf/2003.02769.pdf>using a Bayesian approach</a>. The team
+deployed sets of ads in a Randomized Controlled Trial setting and wanted to know which ad(s) drove the highest
+rates of conversion (clicks, email submission, form completion, etc.). The tool modeled conversion rates using
+the <a href=https://en.wikipedia.org/wiki/Beta_distribution>beta distribution</a>, enabling fast Bayesian updating, and
+producing results that were easy to interpret by a broad audience (e.g. &lsquo;probability of being best&rsquo; versus p-values).
+I deployed the API on <a href=https://kubernetes.io/>kubernetes</a> using
+<a href=https://flask.palletsprojects.com/en/1.1.x/quickstart/>flask</a>.</span></li><li><a href class=project>Voter Modeling to Predict Registration, Voting By Mail, and Voting Early</a>
+<span class=project_description>In the early summer I built a number of voter models to predict the probability of individuals
+(1) registering to vote in the coming months, (2) voting by mail, and (3) voting early, in order to inform audience
+generation and ad targeting. The models used the
+<a href=https://xgboost.readthedocs.io/en/latest/>XGBoost gradient boosted trees algorithm</a> to fit over 1,000 distinct voter
+features. I deployed the models on Hawkfish&rsquo;s <a href=https://www.kubeflow.org/>Kubeflow</a> machine learning platform, using
+<a href=https://www.kubeflow.org/docs/components/katib/overview/>Katib</a> for parallelized hyperparameter tuning, and
+<a href=https://argoproj.github.io/>Argo</a> to score the country&rsquo;s 257 million eligible voters. The voter registration scores
+were used by registration efforts that registered more voters in AZ, GA, MI, PA, and WI than were the margins of difference
+in those states.</span></li><li><a href class=project>Causal Inference of Observational Data with Bootstrapped Logistic Regression</a>
+<span class=project_description>Causal inference is best done in a
+<a href="https://link.springer.com/article/10.1007/s11098-009-9450-2#:~:text=Randomized%20controlled%20trials%20(RCTs)%20are,the%20outcome%E2%80%94in%20the%20experiment.">randomized controlled trial (RCT) setting</a>,
+but there are times when a full RCT set up isn&rsquo;t practical or possible. To assess ad performance as best we could outside of RCTs,
+I built a logistic regression framework that
+<a href=https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4017459/>controlled for potentially confounding variables</a> like viewer age,
+time of day, site domain, and other factors, and isolated the effect of ad content on engagement metrics like view completion
+and click through rates. I deployed the framework on Kubeflow which, given its ability to deploy hundreds of runs in parallel, enabled
+<a href=https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/readings/MIT18_05S14_Reading24.pdf>boostrap sampling to generate confidence intervals</a>.
+Kubeflow also enabled running many conditional settings in parallel, so we could see how ads performed across audiences as a whole and also
+within different demographic buckets.</span></li></ul></div><div class=introduction><h4>Personal</h4><span>Prior to my career as a data scientist, I spent nine years working in venture capital building
 seed-stage companies in the biofuels, water treatment, radioactive waste remediation, mining, and sustainable
 packaging industries.</span><br><span>I&rsquo;m active in a number of organizations throughout New York City, including the <a href=https://www.nyrr.org/>New York Road
 Runners</a> where I&rsquo;m a member of the executive committee of the board of directors, chair
@@ -10,15 +40,4 @@ of the development committee, and vice-chair of the public affairs committee, th
 on the board, and the <a href=https://www.brooklynbridgepark.org/about/about-brooklyn-bridge-park-conservancy/>Brooklyn Bridge Park Conservancy</a>,
 where I&rsquo;m also a board member.</span><br><span>I was a competitive runner back in the day and was the first Brooklyn resident and 46th overall finisher in the
 2011 New York City Marathon, finishing in 2:29:46. That was a long time ago and now I get winded chasing after my kids.
-I live with my wife and two boys in Brooklyn.</span><br></div><div class=introduction><h4>Example Projects</h4><ul><li><a href class=project>Bayesian Hypothesis Testing API</a>
-<span class=project_description>As part of the Direct Response Experiments team for the Mike Bloomberg 2020 Campaign, I built
-our hypothesis testing tool <a href=https://arxiv.org/pdf/2003.02769.pdf>using a Bayesian approach</a>. The team deployed sets
-of ads in a Randomized Controlled Trial setting and wanted to know which ad(s) drove the highest rates of conversion
-(of clicks, email submission, form completion, etc.). The tool modeled conversion rates using the
-<a href=https://en.wikipedia.org/wiki/Beta_distribution>beta distribution</a>, enabling fast Bayesian updating, and producing
-results that were easy to interpret by a broad audience (e.g. &lsquo;probability of being best&rsquo; versus p-values). I deployed
-the API on <a href=https://kubernetes.io/>kubernetes</a> using <a href=https://flask.palletsprojects.com/en/1.1.x/quickstart/>flask</a>.</span></li><li><a href class=project>Digital Townhall Natural Language Processing Pipeline</a>
-<span class=project_description>TODO: add description</span></li><li><a href class=project>Voter Modeling - Registration, Vote By Mail, Early Vote</a>
-<span class=project_description>TODO: add description</span></li><li><a href class=project>Causal Inference of Observational Data with Bootstrapped Logistic Regression</a>
-<span class=project_description>TODO: add description</span></li><li><a href class=project>Productionization of Conditional Average Treatment Effect (CATE) Models</a>
-<span class=project_description>TODO: add description</span></li></ul></div><div class=introduction></div></div></div><div class="footer wrapper"><nav class=nav><div><a href=https://github.com/hadisinaee/avicenna>Avicenna Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></nav></div><script>feather.replace()</script></body></html>
+I live with my wife and two boys in Brooklyn.</span><br></div></div></div><div class="footer wrapper"><nav class=nav><div><a href=https://github.com/hadisinaee/avicenna>Avicenna Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></nav></div><script>feather.replace()</script></body></html>
