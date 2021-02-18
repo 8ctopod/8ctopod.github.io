@@ -35,7 +35,7 @@ timeout=3000
   text="""At Hawkfish, my work has focused on voter engagement and persuasion: building voter models for use in
   audience generation, conducting randomized controlled trials and observational studies to identify the best ad
   content and settings, and [Conditional Average Treatment Effect (CATE) Modeling](https://arxiv.org/abs/1706.03461)
-  to identify which individuals are persuaded most strongly by particular ads.
+  to identify which groups are persuaded most strongly by particular ads.
   """
 
 [[params.projects]]
