@@ -7,7 +7,7 @@ timeout=3000
 
 [params]
   subtitle= "Senior Data Scientist"
-  cv_name= "jar_cv.pdf"  # TODO: update
+  # cv_name= "jar_cv.pdf"  # TODO: update
 
 [[params.affilation]]
   name = "Hawkfish"
