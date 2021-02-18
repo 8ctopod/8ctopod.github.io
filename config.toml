@@ -25,6 +25,8 @@ timeout=3000
   url = "https://www.linkedin.com/in/john-roberts-25a4584/"
 
 
+# TODO: clean up language
+
 [[params.introduction.paragraph]]
   text="""I'm a senior data scientist at [Hawkfish](https://www.hawkfish.us/), Mike Bloomberg's [political tech
   and data organization](https://www.wired.com/story/hawkfish-bloomberg-digital-army-fighting-for-democrats/),
@@ -102,3 +104,5 @@ timeout=3000
   text="""I was a competitive runner back in the day and was the first Brooklyn resident and 46th overall finisher in the
   2011 New York City Marathon, finishing in 2:29:46. That was a long time ago and now I get winded chasing after my kids.
   I live with my wife and two boys in Brooklyn."""
+
+# TODO: add education
