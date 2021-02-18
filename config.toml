@@ -57,7 +57,7 @@ timeout=3000
 	# 	description  = "TODO: add description"
 
  [[params.projects.project]]
-		name = "Voter Modeling to Predict Registration, Voting By Mail, and Voting Early"
+		name = "Voter Modeling to Predict Registration, Voting By Mail, and Early Voting"
 		description  = """In the early summer I built a number of voter models to predict the probability of individuals
     (1) registering to vote in the coming months, (2) voting by mail, and (3) voting early, in order to inform audience
     generation for ad targeting. The models used the
@@ -70,7 +70,7 @@ timeout=3000
     """
 
   [[params.projects.project]]
-		name = "Causal Inference of Observational Data with Bootstrapped Logistic Regression"
+		name = "Bootstrapped Logistic Regression for Causal Inference of Observational Data"
 		description  = """Causal inference is best done in a
     [randomized controlled trial (RCT) setting](https://link.springer.com/article/10.1007/s11098-009-9450-2#:~:text=Randomized%20controlled%20trials%20(RCTs)%20are,the%20outcome%E2%80%94in%20the%20experiment.),
     but there are times when a full RCT set up isn't practical or possible. To assess ad performance as best we could outside of RCTs,
