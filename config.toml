@@ -58,7 +58,7 @@ timeout=3000
 		name = "Voter Modeling to Predict Registration, Voting By Mail, and Voting Early"
 		description  = """In the early summer I built a number of voter models to predict the probability of individuals
     (1) registering to vote in the coming months, (2) voting by mail, and (3) voting early, in order to inform audience
-    generation and ad targeting. The models used the
+    generation for ad targeting. The models used the
     [XGBoost gradient boosted trees algorithm](https://xgboost.readthedocs.io/en/latest/) to fit over 1,000 distinct voter
     features. I deployed the models on Hawkfish's [Kubeflow](https://www.kubeflow.org/) machine learning platform, using
     [Katib](https://www.kubeflow.org/docs/components/katib/overview/) for parallelized hyperparameter tuning, and
