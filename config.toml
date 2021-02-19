@@ -7,7 +7,7 @@ timeout=3000
 
 [params]
   subtitle= "Senior Data Scientist"
-  # cv_name= "jar_cv.pdf"  # TODO: update
+  cv_name= "jar_resume.pdf"
 
 [[params.affilation]]
   name = "Hawkfish"
@@ -23,9 +23,6 @@ timeout=3000
   name = "LinkedIn"
   icon = "linkedin"
   url = "https://www.linkedin.com/in/john-roberts-25a4584/"
-
-
-# TODO: clean up language
 
 [[params.introduction.paragraph]]
   text="""I'm a senior data scientist at [Hawkfish](https://www.hawkfish.us/), Mike Bloomberg's [political tech
